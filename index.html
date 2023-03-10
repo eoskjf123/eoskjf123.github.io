@@ -378,11 +378,11 @@
         <div class="content">
           <h2 class="title is-3">Method Overview: Mixed Video-Image Finetuning</h2>
           <center>
-          <img src="static/images/architecture_finetune.png" alt="Mixed Video-Image Finetuning" class="center-image blend-img-background"/>
+          <img src="static/images/figure2_15-1.png" alt="Overview of Soundin" class="center-image blend-img-background"/>
           </center>
           <div class="level-set has-text-justified">
             <p>
-               Finetuning the video diffusion model on the input video alone limits the extent of motion change. Instead, we use a mixed objective that beside the original objective (bottom left) also finetunes on the unordered set of frames. This is done by using “masked temporal attention”, preventing the temporal attention and convolution from being finetuned (bottom right). This allows adding motion to a static video.
+              Soundini consists of two gradient-based guidance for diffusion: (a)~\textit{Local Sound guidance} and~(b)~\textit{Optical flow guidance}. In (a), we match the appearance of the sampled frame with the sound in the mask region using the loss~$\mathcal{L}_\text{SG}$ and~$\mathcal{L}_\text{DSG}$. First, we minimize the cosine distance loss~$\mathcal{L}_\text{SG}$ between the denoised frame and the sound segments in the audio-visual latent space. Additionally, the loss term $\mathcal{L}_\text{DSG}$ aligns the variation of frame latent representation and that of sound, capturing the transition of sound semantic and reaction. In~(b), our optical flow guidance $\mathcal{L}_\text{flow}$ allows the sampled video to maintain temporal consistency by measuring the mean squared error between warped and sampled frames using optical flow. In particular, gradually increasing the influence on the loss  $\mathcal{L}_\text{flow}$ helps to stably sample the temporally consistent video. Background reconstruction loss $\mathcal{L}_\text{back}$ allows the background to be close to the source video.
             </p>
           </div>
         </div>
