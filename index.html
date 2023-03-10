@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video.">
-  <meta property="og:title" content="Dreamix: Video Diffusion Models are General Video Editors"/>
+  <meta property="og:title" content="Soundini: Sound-Guided Diffusion for Natural Video Editing"/>
   <meta property="og:description" content="Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video."/>
-  <meta property="og:url" content="https://dreamix-video-editing.github.io"/>
+  <meta property="og:url" content="https://eoskjf123.github.io/"/>
   <meta property="og:image" content="static/image/og_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="Dreamix: Video Diffusion Models are General Video Editors">
+  <meta name="twitter:title" content="Soundini: Sound-Guided Diffusion for Natural Video Editing">
   <meta name="twitter:description" content="Given a video and a text prompt, Dreamix edits the video while maintaining fidelity to color, posture, object size and camera pose, resulting in a temporally consistent video.">
   <meta name="twitter:image" content="static/images/twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -169,7 +169,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Text-driven image and video diffusion models have recently achieved unprecedented generation realism. While diffusion models have been successfully applied for image editing, very few works have done so for video editing. We present the first diffusion-based method that is able to perform text-based motion and appearance editing of general videos. Our approach uses a video diffusion model to combine, at inference time, the low-resolution spatio-temporal information from the original video with new, high resolution information that it synthesized to align with the guiding text-prompt. As obtaining high-fidelity to the original video requires retaining some of its high-resolution information, we add a preliminary stage of finetuning the model on the original video, significantly boosting fidelity. We propose to improve motion editability by a new, mixed objective that jointly finetunes with full temporal attention and with temporal attention masking. We further introduce a new framework for image animation. We first transform the image into a coarse video by simple image processing operations such as replication and perspective geometric projections, and then use our general video editor to animate it. As a further application, we can use our method for subject-driven video generation. Extensive qualitative and numerical experiments showcase the remarkable editing ability of our method and establish its superior performance compared to baseline methods.
+            We propose a method for adding sound-guided visual effects to specific regions of videos with a zero-shot setting. Animating the appearance of the visual effect is challenging because each frame of the edited video should have visual changes while maintaining temporal consistency. Moreover, existing video editing solutions focus on temporal consistency across frames, ignoring the visual style variations over time, e.g., thunderstorm, wave, fire crackling. To overcome this limitation, we utilize temporal sound features for the dynamic style. Specifically, we guide denoising diffusion probabilistic models with an audio latent representation in the audio-visual latent space. To the best of our knowledge, our work is the first to explore sound-guided natural video editing from various sound sources with sound-specialized properties, such as intensity, timbre, and volume. Additionally, we design optical flow-based guidance to generate temporally consistent video frames, capturing the pixel-wise relationship between adjacent frames. Experimental results show that our method outperforms existing video editing techniques, producing more realistic visual effects that reflect the properties of sound. 
           </p>
         </div>
       </div>
